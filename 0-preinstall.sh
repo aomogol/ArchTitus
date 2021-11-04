@@ -13,8 +13,9 @@ echo "Setting up mirrors for optimal download          "
 echo "-------------------------------------------------"
 iso=$(curl -4 ifconfig.co/country-iso)
 timedatectl set-ntp true
-pacman -S --noconfirm pacman-contrib terminus-font
-setfont ter-v22b
+pacman -S --noconfirm pacman-contrib 
+#terminus-font
+#setfont ter-v22b
 sed -i 's/^#Para/Para/' /etc/pacman.conf
 pacman -S --noconfirm reflector rsync grub
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
@@ -28,8 +29,9 @@ echo -e "  ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═�
 echo -e "-------------------------------------------------------------------------"
 echo -e "-Setting up $iso mirrors for faster downloads"
 echo -e "-------------------------------------------------------------------------"
+#reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 
-reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
+reflector -a 48 -f 15 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 mkdir /mnt
 
 
@@ -57,7 +59,7 @@ sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 
 # create partitions
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK} # partition 1 (BIOS Boot Partition)
-sgdisk -n 2::+100M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK} # partition 2 (UEFI Boot Partition)
+sgdisk -n 2::+200M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK} # partition 2 (UEFI Boot Partition)
 sgdisk -n 3::-0 --typecode=3:8300 --change-name=3:'ROOT' ${DISK} # partition 3 (Root), default start, remaining
 if [[ ! -d "/sys/firmware/efi" ]]; then
     sgdisk -A 1:set:2 ${DISK}
@@ -133,3 +135,4 @@ fi
 echo "--------------------------------------"
 echo "--   SYSTEM READY FOR 1-setup       --"
 echo "--------------------------------------"
+) 2>&1 | tee installlog.txt
