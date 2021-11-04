@@ -26,13 +26,13 @@ ln -s "$HOME/zsh/.zshrc" $HOME/.zshrc
 PKGS=(
 'autojump'
 'awesome-terminal-fonts'
-'brave-bin' # Brave Browser
-'dxvk-bin' # DXVK DirectX to Vulcan
-'github-desktop-bin' # Github Desktop sync
-'lightly-git'
-'lightlyshaders-git'
-'mangohud' # Gaming FPS Counter
-'mangohud-common'
+#'brave-bin' # Brave Browser
+#'dxvk-bin' # DXVK DirectX to Vulcan
+#'github-desktop-bin' # Github Desktop sync
+#'lightly-git'
+#'lightlyshaders-git'
+#'mangohud' # Gaming FPS Counter
+#'mangohud-common'
 'nerd-fonts-fira-code'
 'nordic-darker-standard-buttons-theme'
 'nordic-darker-theme'
@@ -48,7 +48,7 @@ PKGS=(
 'ttf-hack'
 'ttf-meslo' # Nerdfont package
 'ttf-roboto'
-'zoom' # video conferences
+#'zoom' # video conferences
 'snap-pac'
 )
 
