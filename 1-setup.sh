@@ -82,9 +82,9 @@ PKGS=(
 'breeze-gtk'
 'bridge-utils'
 'btrfs-progs'
-'celluloid' # video players
-'cmatrix'
-'code' # Visual Studio code
+#'celluloid' # video players
+#'cmatrix'
+#'code' # Visual Studio code
 'cronie'
 'cups'
 'dialog'
@@ -101,9 +101,9 @@ PKGS=(
 'fuse2'
 'fuse3'
 'fuseiso'
-'gamemode'
+#'gamemode'
 'gcc'
-'gimp' # Photo editing
+#'gimp' # Photo editing
 'git'
 'gparted' # partition management
 'gptfdisk'
@@ -116,7 +116,7 @@ PKGS=(
 'haveged'
 'htop'
 'iptables-nft'
-'jdk-openjdk' # Java 17
+#'jdk-openjdk' # Java 17
 'kate'
 'kcodecs'
 'kcoreaddons'
@@ -136,7 +136,7 @@ PKGS=(
 'linux-firmware'
 'linux-headers'
 'lsof'
-'lutris'
+#'lutris'
 'lzop'
 'm4'
 'make'
@@ -167,13 +167,13 @@ PKGS=(
 'python-psutil'
 'python-pyqt5'
 'python-pip'
-'qemu'
+#'qemu'
 'rsync'
 'sddm'
 'sddm-kcm'
 'snapper'
 'spectacle'
-'steam'
+#'steam'
 'sudo'
 'swtpm'
 'synergy'
@@ -185,13 +185,13 @@ PKGS=(
 'unzip'
 'usbutils'
 'vim'
-'virt-manager'
-'virt-viewer'
+#'virt-manager'
+#'virt-viewer'
 'wget'
 'which'
-'wine-gecko'
-'wine-mono'
-'winetricks'
+#'wine-gecko'
+#'wine-mono'
+#'winetricks'
 'xdg-desktop-portal-kde'
 'xdg-user-dirs'
 'zeroconf-ioslave'
