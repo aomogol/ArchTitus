@@ -137,4 +137,4 @@ fi
 echo "--------------------------------------"
 echo "--   SYSTEM READY FOR 1-setup       --"
 echo "--------------------------------------"
-) 2>&1 | tee installlog.txt
+) 2>&1 | tee 0-installlog.txt
