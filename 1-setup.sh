@@ -237,16 +237,19 @@ fi
 
 echo -e "\nDone!\n"
 if ! source install.conf; then
-	read -p "Please enter username:" username
+	#read -p "Please enter username:" username
+	username=aom
 echo "username=$username" >> ${HOME}/ArchTitus/install.conf
 fi
 if [ $(whoami) = "root"  ];
 then
+	groupadd libvirt
     useradd -m -G wheel,libvirt -s /bin/bash $username 
 	passwd $username
 	cp -R /root/ArchTitus /home/$username/
     chown -R $username: /home/$username/ArchTitus
-	read -p "Please name your machine:" nameofmachine
+	#read -p "Please name your machine:" nameofmachine
+	nameofmachine=archlinux
 	echo $nameofmachine > /etc/hostname
 else
 	echo "You are already a user proceed with aur installs"
